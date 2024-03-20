@@ -59,7 +59,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped> 
 .vjs-key {
     color: cornflowerblue
 }

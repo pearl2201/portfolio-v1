@@ -15,7 +15,8 @@
     "vue": "^3.4.21",
     "vue-json-pretty": "^2.3.0",
     "vue-router": "^4.3.0",
-    "vue-slick-carousel": "^1.0.6"
+    "vue-slick-carousel": "^1.0.6",
+    "vue3-marquee-slider": "^1.0.5"
   },
   "devDependencies": {
     "vite-plugin-vuetify": "^2.0.3",

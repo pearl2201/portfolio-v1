@@ -1,26 +1,65 @@
 <!-- https://ismail9k.github.io/vue3-carousel/examples.html -->
 <!-- https://www.abusaid.me/#experience -->
+<!-- https://shaq-portfolio.netlify.app/#contact -->
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-// optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import { VueMarqueeSlider } from 'vue3-marquee-slider';
+import '@/node_modules/vue3-marquee-slider/dist/style.css'
 
 export default {
   components: {
-    VueSlickCarousel,
+    VueMarqueeSlider,
   },
 };
 </script>
 <template>
   <div class="page-inner">
     <div class="page-inner-1">
-      <VueSlickCarousel :arrows="true" :dots="true">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-      </VueSlickCarousel>
+      <h6 class="text-h6 d-block mb-2" id="intro-name">
+        MY SKILLS
+      </h6>
+      <h4 class="text-h3 d-block mb-4" id="intro-job">
+        Technologies
+      </h4>
+      <div>
+        <vue-marquee-slider id="marquee-slider1" :speed="4040" :width="120">
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/zrC_1622176244_logo-black-120.png" width="120"
+              height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/O1j_1670884991_js-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/Igx_1670885749_vue-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/TPs_1670885858_react-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/jY4_1670885309_angular-logo.png" width="120" height="120" />
+          </div>
+        </vue-marquee-slider>
+      </div>
+      <div>
+        <vue-marquee-slider id="marquee-slider2" :speed="4040" :width="120">
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/zrC_1622176244_logo-black-120.png" width="120"
+              height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/O1j_1670884991_js-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/Igx_1670885749_vue-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/TPs_1670885858_react-logo.png" width="120" height="120" />
+          </div>
+          <div class="logo-skill">
+            <img src="https://app.imgforce.com/images/user/jY4_1670885309_angular-logo.png" width="120" height="120" />
+          </div>
+        </vue-marquee-slider>
+      </div>
     </div>
   </div>
 </template>
@@ -56,8 +95,10 @@ export default {
 .page-inner-1 {
   width: 100%;
   height: auto;
-  display: block;
-  display: flex;
-  align-items: center;
+}
+
+.logo-skill {
+  width: 120px;
+  height: 120px;
 }
 </style>
