@@ -5,7 +5,7 @@
             <v-container class="page-wrapper pb-sm-15 pb-10">
                 <div class='maxWidth d-flex flex-column'>
                     <div class="d-flex mb-4">
-                        <div class="text-h4">Pearl2201</div>
+                        <v-btn variant="text" flat class="text-h4" to="/">Pearl2201</v-btn>
                         <v-list class="ml-auto d-flex">
                             <v-list-item to="/">ABOUT</v-list-item>
                             <v-list-item to="/experience">EXPERIENCE</v-list-item>

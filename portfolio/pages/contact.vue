@@ -4,11 +4,8 @@ import { object, string } from "yup";
 import * as Yup from 'yup';
 
 const contactFormSchema = object().shape({
-    name: string().required().min(8),
-    email: string()
-        .email()
-        .required(),
-    message: string().required().min(1)
+    subject: string().required(),
+    message: string().required()
 });
 
 export default {
@@ -19,8 +16,7 @@ export default {
         return {
             valid: false,
             item: {
-                name: '',
-                email: '',
+                subject: '',
                 message: ''
 
             }
@@ -41,7 +37,7 @@ export default {
         async saveContact() {
             this.valid = await contactFormSchema.isValid(this.item);
             if (this.valid) {
-
+                window.location.assign(`mailto:nguyenanhngoc.ftu@gmail.com?subject=${this.item.subject}&body=${this.item.message}`)
             }
         },
     }
@@ -61,13 +57,11 @@ export default {
                 <v-row>
                     <v-col cols="12" lg="6">
 
-                        <v-form ref="form" v-model="valid">
-                            <v-text-field v-model="item.name" :rules="[() => validateCreatedItem('name')]"
-                                label="Your Name"></v-text-field>
-                            <v-text-field v-model="item.email" :rules="[() => validateCreatedItem('email')]"
-                                label="Your Email"></v-text-field>
+                        <v-form ref="form" v-model="valid" @submit.prevent="saveContact">
+                            <v-text-field v-model="item.subject" :rules="[() => validateCreatedItem('subject')]"
+                                label="Subject"></v-text-field>
                             <v-text-field v-model="item.message" :rules="[() => validateCreatedItem('message')]"
-                                label="Your Message"></v-text-field>
+                                label="Message"></v-text-field>
                             <v-btn color="primary" class="mt-2" type="submit" block>Send <v-icon>
                                     mdi-mail</v-icon></v-btn>
                         </v-form>
@@ -85,10 +79,15 @@ export default {
                             </v-row>
                             <v-row>
                                 <v-col class="d-flex">
-                                    <v-btn icon="mdi-github" variant="text" size="x-large"></v-btn>
-                                    <v-btn icon="mdi-linkedin" variant="text" size="x-large"></v-btn>
-                                    <v-btn icon="mdi-facebook" variant="text" size="x-large"></v-btn>
-                                    <v-btn icon="mdi-twitter" variant="text" size="x-large"></v-btn>
+                                    <v-btn icon="mdi-github" variant="text" href="https://github.com/pearl2201"
+                                        target="_blank"></v-btn>
+                                    <v-btn icon="mdi-linkedin" variant="text"
+                                        href="https://vn.linkedin.com/in/nguy%E1%BB%85n-anh-ng%E1%BB%8Dc-a3a94a36"
+                                        target="_blank"></v-btn>
+                                    <v-btn icon="mdi-facebook" variant="text" href="https://www.facebook.com/pearl.2201"
+                                        target="_blank"></v-btn>
+                                    <v-btn icon="mdi-twitter" variant="text" href="https://twitter.com/pearl2201"
+                                        target="_blank"></v-btn>
                                 </v-col>
                             </v-row>
                         </div>
