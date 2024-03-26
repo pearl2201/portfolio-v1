@@ -1,14 +1,19 @@
 <script lang="ts">
-
+import { useNotifier } from "vuetify-notifier";
 import { object, string } from "yup";
 import * as Yup from 'yup';
 
 const contactFormSchema = object().shape({
-    subject: string().required(),
+    name: string().required(),
+    email: string().required().email(),
     message: string().required()
 });
 
 export default {
+    setup() {
+        const $notifier = useNotifier();
+        return { $notifier: $notifier }
+    },
     components: {
 
     },
@@ -16,7 +21,8 @@ export default {
         return {
             valid: false,
             item: {
-                subject: '',
+                name: '',
+                email: '',
                 message: ''
 
             }
@@ -37,7 +43,11 @@ export default {
         async saveContact() {
             this.valid = await contactFormSchema.isValid(this.item);
             if (this.valid) {
-                window.location.assign(`mailto:nguyenanhngoc.ftu@gmail.com?subject=${this.item.subject}&body=${this.item.message}`)
+                const res = await this.$fetch('https://api-portfolio.pearl2201.com/api/mails', {
+                    method: 'POST',
+                    body: this.item
+                });
+                this.$notifier.toast("Send info successful", "success");
             }
         },
     }
@@ -58,10 +68,12 @@ export default {
                     <v-col cols="12" lg="6">
 
                         <v-form ref="form" v-model="valid" @submit.prevent="saveContact">
-                            <v-text-field v-model="item.subject" :rules="[() => validateCreatedItem('subject')]"
-                                label="Subject"></v-text-field>
+                            <v-text-field v-model="item.name" :rules="[() => validateCreatedItem('name')]"
+                                label="Your name"></v-text-field>
+                            <v-text-field v-model="item.email" :rules="[() => validateCreatedItem('email')]"
+                                label="Your email"></v-text-field>
                             <v-text-field v-model="item.message" :rules="[() => validateCreatedItem('message')]"
-                                label="Message"></v-text-field>
+                                label="Your message"></v-text-field>
                             <v-btn color="primary" class="mt-2" type="submit" block>Send <v-icon>
                                     mdi-mail</v-icon></v-btn>
                         </v-form>

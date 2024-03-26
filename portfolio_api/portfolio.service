@@ -1,0 +1,12 @@
+[Unit]
+Description=%i service with docker compose
+
+[Service]
+Type=exec 
+WorkingDirectory=/root/portfolio-v1/portfolio_api
+ExecStart=/root/portfolio-v1/portfolio_api/_build/prod/rel/portfolio_api/bin/portfolio_api start
+ExecStop=/root/portfolio-v1/portfolio_api/_build/prod/rel/portfolio_api/bin/portfolio_api stop
+EnvironmentFile=/etc/portfolio/portfolio.conf
+
+[Install]
+WantedBy=multi-user.target

@@ -20,7 +20,8 @@ config :portfolio_api, PortfolioApiWeb.Endpoint,
     layout: false
   ],
   pubsub_server: PortfolioApi.PubSub,
-  live_view: [signing_salt: "ss8xzRoe"]
+  live_view: [signing_salt: "ss8xzRoe"],
+  server: true
 
 # Configures the mailer
 #
@@ -29,7 +30,13 @@ config :portfolio_api, PortfolioApiWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :portfolio_api, PortfolioApi.Mailer, adapter: Swoosh.Adapters.Local
+config :portfolio_api, PortfolioApi.Mailer,
+  adapter: Swoosh.Adapters.Mua,
+  relay: "smtp.gmail.com",
+  port: 587,
+  auth: [username: System.get_env("GMAIL_ACC"), password: System.get_env("GMAIL_PASS")],
+  username: System.get_env("GMAIL_ACC"),
+  email_dest: System.get_env("GMAIL_DEST")
 
 # Configures Elixir's Logger
 config :logger, :console,

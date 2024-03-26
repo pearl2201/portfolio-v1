@@ -1,0 +1,23 @@
+_build/prod/rel/portfolio_api/bin/portfolio_api eval "PortfolioApi.Release.migrate"
+
+Release created at _build/prod/rel/portfolio_api
+
+    # To start your system
+    _build/prod/rel/portfolio_api/bin/portfolio_api start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/portfolio_api/bin/portfolio_api remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/portfolio_api/bin/portfolio_api stop
+
+To list all commands:
+
+    _build/prod/rel/portfolio_api/bin/portfolio_api
+
+    _build/prod/rel/portfolio_api/bin/portfolio_api server
+
+sudo systemctl start portfolio
+sudo systemctl enable portfolio 

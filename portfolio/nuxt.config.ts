@@ -22,7 +22,8 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    'nuxt-svgo'
+    'nuxt-svgo',
+    'vuetify-notifier/nuxt'
     //...
   ],
   vite: {

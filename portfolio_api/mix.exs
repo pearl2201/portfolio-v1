@@ -37,7 +37,7 @@ defmodule PortfolioApi.MixProject do
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_live_dashboard, "~> 0.8.3"},
-      {:swoosh, "~> 1.5"},
+      {:swoosh, "~> 1.16.3"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
@@ -45,7 +45,12 @@ defmodule PortfolioApi.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
-      {:ecto_sqlite3, "~> 0.13"}
+      {:ecto_sqlite3, "~> 0.13"},
+      {:gen_smtp, "~> 1.1"},
+      {:tls_certificate_check, "~> 1.22"},
+      {:mua, "~> 0.1.0"},
+      {:mail, "~> 0.3.0"},
+      {:castore, "~> 1.0"}
     ]
   end
 

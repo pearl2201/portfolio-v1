@@ -23,6 +23,7 @@
   "devDependencies": {
     "nuxt-svgo": "^4.0.0",
     "vite-plugin-vuetify": "^2.0.3",
-    "vuetify": "^3.5.9"
+    "vuetify": "^3.5.9",
+    "vuetify-notifier": "^0.0.10"
   }
 }

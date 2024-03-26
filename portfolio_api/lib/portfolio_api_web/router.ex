@@ -7,7 +7,7 @@ defmodule PortfolioApiWeb.Router do
 
   scope "/api", PortfolioApiWeb do
     pipe_through :api
-
+    post "/mails/", MailController, :send
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
