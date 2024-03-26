@@ -25,7 +25,8 @@ export default {
                 email: '',
                 message: ''
 
-            }
+            },
+            loading: false
         }
 
     },
@@ -43,11 +44,12 @@ export default {
         async saveContact() {
             this.valid = await contactFormSchema.isValid(this.item);
             if (this.valid) {
-                const res = await this.$fetch('https://api-portfolio.pearl2201.com/api/mails', {
+                this.loading = true
+                const res = await $fetch('https://api-portfolio.pearl2201.com/api/mails', {
                     method: 'POST',
                     body: this.item
                 });
-                this.$notifier.toast("Send info successful", "success");
+                this.loading = false
             }
         },
     }
@@ -72,9 +74,11 @@ export default {
                                 label="Your name"></v-text-field>
                             <v-text-field v-model="item.email" :rules="[() => validateCreatedItem('email')]"
                                 label="Your email"></v-text-field>
-                            <v-text-field v-model="item.message" :rules="[() => validateCreatedItem('message')]"
-                                label="Your message"></v-text-field>
-                            <v-btn color="primary" class="mt-2" type="submit" block>Send <v-icon>
+                            <v-textarea v-model="item.message" :rules="[() => validateCreatedItem('message')]"
+                                label="Your message"></v-textarea>
+                            <v-btn color="primary" class="mt-2" type="submit" block> <v-progress-circular :size="20"
+                                    :width="1" color="green" indeterminate class="mr-2" v-if="loading"></v-progress-circular> Send
+                                <v-icon class="ml-2">
                                     mdi-mail</v-icon></v-btn>
                         </v-form>
 

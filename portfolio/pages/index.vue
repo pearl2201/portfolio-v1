@@ -16,8 +16,7 @@ export default {
                         <v-col class="text-h4">
                             Hello,<br />
                             This is <span id="intro-name">Anh Ngọc</span>, I'm a<br />
-                            Profressional <span id="intro-job">Software<br />
-                                Developer</span>.
+                            <span id="intro-job">Fullstack Developer</span>.
                         </v-col>
                     </v-row>
                     <v-row>
@@ -49,7 +48,7 @@ export default {
                     <v-row id="window-body">
                         <v-col>
                             <vue-json-pretty
-                                :data="{ name: 'Nguyễn Anh Ngọc', skills: ['Vue', 'C#', 'Python', 'PostgreSQL', 'Docker', 'Kubernetes', 'AWS'], hardWorker: true, quickLearner: true, problemSolver: true, hireable: true }" />
+                                :data="{ name: 'Nguyễn Anh Ngọc', skills: ['Vue', 'React', 'Elixir', 'C#', 'Python', 'PostgreSQL', 'Docker', 'Kubernetes', 'AWS', 'Unity'], hardWorker: true, quickLearner: true, problemSolver: true, hireable: true }" />
                         </v-col>
                     </v-row>
                 </v-col>
