@@ -50,7 +50,8 @@ defmodule PortfolioApi.MixProject do
       {:tls_certificate_check, "~> 1.22"},
       {:mua, "~> 0.1.0"},
       {:mail, "~> 0.3.0"},
-      {:castore, "~> 1.0"}
+      {:castore, "~> 1.0"},
+      {:cors_plug, "~> 3.0"},
     ]
   end
 
