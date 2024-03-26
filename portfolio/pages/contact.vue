@@ -4,7 +4,8 @@ import { object, string } from "yup";
 import * as Yup from 'yup';
 
 const contactFormSchema = object().shape({
-    subject: string().required(),
+    name: string().required(),
+    email: string().required(),
     message: string().required()
 });
 
@@ -16,7 +17,8 @@ export default {
         return {
             valid: false,
             item: {
-                subject: '',
+                name: '',
+                email: '',
                 message: ''
 
             }
@@ -37,7 +39,7 @@ export default {
         async saveContact() {
             this.valid = await contactFormSchema.isValid(this.item);
             if (this.valid) {
-                window.location.assign(`mailto:nguyenanhngoc.ftu@gmail.com?subject=${this.item.subject}&body=${this.item.message}`)
+                
             }
         },
     }
@@ -58,8 +60,11 @@ export default {
                     <v-col cols="12" lg="6">
 
                         <v-form ref="form" v-model="valid" @submit.prevent="saveContact">
-                            <v-text-field v-model="item.subject" :rules="[() => validateCreatedItem('subject')]"
-                                label="Subject"></v-text-field>
+                            <v-text-field v-model="item.name" :rules="[() => validateCreatedItem('name')]"
+                                label="Your Name"></v-text-field>
+                            <v-text-field v-model="item.email" :rules="[() => validateCreatedItem('mail')]"
+                                label="Your Email"></v-text-field>
+
                             <v-text-field v-model="item.message" :rules="[() => validateCreatedItem('message')]"
                                 label="Message"></v-text-field>
                             <v-btn color="primary" class="mt-2" type="submit" block>Send <v-icon>
