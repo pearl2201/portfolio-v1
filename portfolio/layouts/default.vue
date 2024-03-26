@@ -1,3 +1,4 @@
+
 <template>
     <v-app>
         <v-main>
@@ -9,10 +10,12 @@
                             <v-list-item to="/">ABOUT</v-list-item>
                             <v-list-item to="/experience">EXPERIENCE</v-list-item>
                             <v-list-item to="/skills">SKILLS</v-list-item>
-                            <v-list-item to="/education">EDUCATION</v-list-item>
+
                             <v-list-item to="/projects">PROJECTS</v-list-item>
+                            <v-list-item to="/contact">CONTACT</v-list-item>
                         </v-list>
                     </div>
+
 
 
                 </div>
@@ -31,10 +34,12 @@
     </v-app>
 </template>
 
-<style scoped>
+<style>
 .page-wrapper {
     min-height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
 }
+
+
 </style>

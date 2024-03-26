@@ -9,54 +9,167 @@ export default {
 }
 </script>
 <template>
-    <div class="page-inner">
-       <div class="page-inner-1">
-            <v-row>
-                <v-col cols="12" lg="6" class="">
+    <Transition name="fade">
+        <div class="page-inner">
+            <div class="page-inner-1">
+                <h6 class="text-h6 d-block mb-2" id="intro-name">
+                    CASE STUDIES
+                </h6>
+                <h4 class="text-h3 d-block mb-4" id="intro-job">
+                    Projects
+                </h4>
+                <TransitionGroup tag="div" name="slide">
                     <v-row>
-                        <v-col class="text-h4">
-                            Hello,<br />
-                            This is <span id="intro-name">Anh Ngọc</span>, I'm a<br />
-                            Profressional <span id="intro-job">Software<br />
-                                Developer</span>.
-                        </v-col>
-                    </v-row>
-                    <v-row>
-                        <v-col class="d-flex">
-                            <v-btn icon="mdi-github" variant="text"></v-btn>
-                            <v-btn icon="mdi-linkedin" variant="text"></v-btn>
-                            <v-btn icon="mdi-facebook" variant="text"></v-btn>
-                            <v-btn icon="mdi-twitter" variant="text"></v-btn>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
 
-                        </v-col>
-                    </v-row>
-                    <v-row>
-                        <v-col>
-                            <v-btn class="mr-2" color="primary"> CONTACT ME <v-icon icon="mdi-account-box"></v-icon></v-btn>
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
 
-                            <v-btn color="secondary"> GET RESUME <v-icon icon="mdi-download"></v-icon></v-btn>
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
                         </v-col>
-                    </v-row>
-                </v-col>
-                <v-col cols="12" lg="6">
-                    <v-row id="window-top">
-                        <v-col>
-                            <v-icon icon="mdi-circle" variant="text" color="red" size="x-small" class="mr-1"></v-icon>
-                            <v-icon icon="mdi-circle" variant="text" color="green" size="x-small" class="mr-1"></v-icon>
-                            <v-icon icon="mdi-circle" variant="text" color="blue" size="x-small"></v-icon>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
                         </v-col>
-                    </v-row>
-                    <v-row id="window-body">
-                        <v-col>
-                            <vue-json-pretty
-                                :data="{ name: 'Nguyễn Anh Ngọc', skills: ['Vue', 'C#', 'Python', 'PostgreSQL', 'Docker', 'Kubernetes', 'AWS'], hardWorker: true, quickLearner: true, problemSolver: true, hireable: true }" />
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
                         </v-col>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" lg="3" class="">
+                            <v-card class="mx-auto">
+                                <v-img class="align-end text-white" height="200"
+                                    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" cover>
+                                    <v-card-title>Top 10 Australian beaches</v-card-title>
+                                </v-img>
+
+                                <v-card-subtitle class="pt-4">
+                                    Number 10
+                                </v-card-subtitle>
+
+                                <v-card-text>
+                                    <div>Whitehaven Beach</div>
+
+                                    <div>Whitsunday Island, Whitsunday Islands</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+
                     </v-row>
-                </v-col>
-            </v-row>
+                </TransitionGroup>
+            </div>
         </div>
-    </div>
-
+    </Transition>
 </template>
 
 <style scoped>
@@ -87,11 +200,9 @@ export default {
     align-items: center;
 }
 
-.page-inner-1{
-    width:100%;
-    height:auto;
-    display:block;
-    display: flex;
-    align-items: center;
+.page-inner-1 {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 </style>

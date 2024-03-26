@@ -9,8 +9,8 @@ export default {
 }
 </script>
 <template>
-    <div class="page-inner">
-       <div class="page-inner-1">
+    <div class="page-inner" >
+       <div class="page-inner-1" >
             <v-row>
                 <v-col cols="12" lg="6" class="">
                     <v-row>

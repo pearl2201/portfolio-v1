@@ -9,6 +9,7 @@ export default {
 };
 </script>
 <template>
+  <v-fade-transition>
   <div class="page-inner">
     <div class="page-inner-1">
       <h6 class="text-h6 mb-2" id="intro-name">
@@ -74,6 +75,7 @@ export default {
       </v-timeline>
     </div>
   </div>
+</v-fade-transition>
 </template>
 
 <style scoped>

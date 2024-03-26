@@ -4,14 +4,38 @@
 <script>
 import { VueMarqueeSlider } from 'vue3-marquee-slider';
 import '@/node_modules/vue3-marquee-slider/dist/style.css'
-
+import IconReact from '@/assets/svg/skills/react.svg'
+import IconVue from '@/assets/svg/skills/vue.svg'
+import IconTypescript from '@/assets/svg/skills/typescript.svg'
+import IconVuetify from '@/assets/svg/skills/vuetifyjs.svg'
+import IconUnity from '@/assets/svg/skills/unity.svg'
+import IconNuxt from '@/assets/svg/skills/nuxtJS.svg'
+import IconCsharp from '@/assets/svg/skills/csharp.svg'
+import IconAws from '@/assets/svg/skills/aws.svg'
+import IconDocker from '@/assets/svg/skills/docker.svg'
+import IconPython from '@/assets/svg/skills/python.svg'
+import IconPostgresql from '@/assets/svg/skills/postgresql.svg'
 export default {
   components: {
     VueMarqueeSlider,
+    IconReact,
+    IconVue,
+    IconTypescript,
+    IconVuetify,
+    IconUnity,
+    IconNuxt,
+    IconCsharp,
+    IconAws,
+    IconDocker,
+    IconPython,
+    IconPostgresql
+
   },
 };
 </script>
 <template>
+
+
   <div class="page-inner">
     <div class="page-inner-1">
       <h6 class="text-h6 d-block mb-2" id="intro-name">
@@ -21,44 +45,46 @@ export default {
         Technologies
       </h4>
       <div>
-        <vue-marquee-slider id="marquee-slider1" :speed="4040" :width="120">
+
+        <TransitionGroup tag="div" name="slide" class="mb-8 d-flex justify-space-between align-center items-center">
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/zrC_1622176244_logo-black-120.png" width="120"
-              height="120" />
+            <IconTypescript class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/O1j_1670884991_js-logo.png" width="120" height="120" />
+            <IconReact class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/Igx_1670885749_vue-logo.png" width="120" height="120" />
+            <IconVue class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/TPs_1670885858_react-logo.png" width="120" height="120" />
+            <IconNuxt class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/jY4_1670885309_angular-logo.png" width="120" height="120" />
+            <IconUnity class="text-xl" :fontControlled="false" filled />
           </div>
-        </vue-marquee-slider>
+        </TransitionGroup>
+
       </div>
       <div>
-        <vue-marquee-slider id="marquee-slider2" :speed="4040" :width="120">
+        <div id="marquee-slider2" :speed="4040" :width="120"
+          class="d-flex d-flex justify-space-between align-center items-center">
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/zrC_1622176244_logo-black-120.png" width="120"
-              height="120" />
+            <IconCsharp class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/O1j_1670884991_js-logo.png" width="120" height="120" />
+            <IconPython class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/Igx_1670885749_vue-logo.png" width="120" height="120" />
+            <IconPostgresql class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/TPs_1670885858_react-logo.png" width="120" height="120" />
+            <IconDocker class="text-xl" :fontControlled="false" filled />
           </div>
           <div class="logo-skill">
-            <img src="https://app.imgforce.com/images/user/jY4_1670885309_angular-logo.png" width="120" height="120" />
+            <IconAws class="text-xl" :fontControlled="false" filled />
           </div>
-        </vue-marquee-slider>
+
+        </div>
       </div>
     </div>
   </div>
