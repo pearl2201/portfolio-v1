@@ -1,6 +1,6 @@
 // import this after install `@mdi/font` package
 import '@mdi/font/css/materialdesignicons.css'
-
+import 'vue-json-pretty/lib/styles.css';
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 

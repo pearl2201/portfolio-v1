@@ -1,6 +1,5 @@
 <script lang="ts">
-import VueJsonPretty from 'vue-json-pretty';
-import 'vue-json-pretty/lib/styles.css';
+
 import { object, string } from "yup";
 import * as Yup from 'yup';
 
@@ -14,7 +13,7 @@ const contactFormSchema = object().shape({
 
 export default {
     components: {
-        VueJsonPretty
+
     },
     data() {
         return {

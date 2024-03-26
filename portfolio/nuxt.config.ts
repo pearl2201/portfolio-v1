@@ -3,7 +3,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     pageTransition: {
-      name: 'layout',
+      name: 'page',
       mode: 'out-in' // default
     },
     layoutTransition: {

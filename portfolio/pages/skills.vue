@@ -2,8 +2,6 @@
 <!-- https://www.abusaid.me/#experience -->
 <!-- https://shaq-portfolio.netlify.app/#contact -->
 <script>
-import { VueMarqueeSlider } from 'vue3-marquee-slider';
-import '@/node_modules/vue3-marquee-slider/dist/style.css'
 import IconReact from '@/assets/svg/skills/react.svg'
 import IconVue from '@/assets/svg/skills/vue.svg'
 import IconTypescript from '@/assets/svg/skills/typescript.svg'
@@ -17,7 +15,6 @@ import IconPython from '@/assets/svg/skills/python.svg'
 import IconPostgresql from '@/assets/svg/skills/postgresql.svg'
 export default {
   components: {
-    VueMarqueeSlider,
     IconReact,
     IconVue,
     IconTypescript,
