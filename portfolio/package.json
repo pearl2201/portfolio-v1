@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "axios": "^1.6.8",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^3.11.0",
     "vue": "^3.4.21",
@@ -23,7 +24,7 @@
   "devDependencies": {
     "nuxt-svgo": "^4.0.0",
     "vite-plugin-vuetify": "^2.0.3",
-    "vuetify": "^3.5.9",
+    "vuetify": "^3.5.10",
     "vuetify-notifier": "^0.0.10"
   }
 }

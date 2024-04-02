@@ -10,7 +10,7 @@
                             <v-list-item to="/">ABOUT</v-list-item>
                             <v-list-item to="/experience">EXPERIENCE</v-list-item>
                             <v-list-item to="/skills">SKILLS</v-list-item>
-
+                            <v-list-item to="/tools">TOOLS</v-list-item>
                             <!-- <v-list-item to="/projects">PROJECTS</v-list-item> -->
                             <v-list-item to="/contact">CONTACT</v-list-item>
                         </v-list>

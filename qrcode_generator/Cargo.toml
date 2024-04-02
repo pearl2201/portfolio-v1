@@ -10,6 +10,10 @@ crate-type = ["cdylib"]
 worker = "0.0.18"
 qrcode = "0.13"
 serde = "1.0.188"
+tracing = "0.1"
+tracing-web = "0.1"
+tracing-subscriber = { version = "0.3", features=['time', 'json'] }
+time = { version = "0.3", features=['wasm-bindgen'] }
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
