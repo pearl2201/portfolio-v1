@@ -1,0 +1,27 @@
+POST http://127.0.0.1:8787/generate HTTP/1.1
+content-type: application/json
+
+{
+    "content": "sch_5_acc_005",
+    "size": 160,
+    "dark_color": "#000",
+    "light_color": "#fff"
+}
+###
+GET http://127.0.0.1:8787/foo HTTP/1.1
+content-type: application/json
+###
+
+GET https://worker-rust.nguyenanhngoc-ftu9932.workers.dev/foo HTTP/1.1
+content-type: application/json
+###
+
+POST https://worker-rust.nguyenanhngoc-ftu9932.workers.dev/generate HTTP/1.1
+content-type: application/json
+
+{
+    "content": "sample",
+    "size": 160,
+    "dark_color": "#000",
+    "light_color": "#fff"
+}

@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "portfolio_api"
+		},
+		{
+			"path": "qrcode_generator"
 		}
 	],
 	"settings": {}
