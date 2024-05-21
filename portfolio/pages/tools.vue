@@ -119,6 +119,14 @@ export default {
                         <div v-if="qrcodeSvg" v-html="qrcodeSvg"></div>
                     </v-col>
                 </v-row>
+                <v-row>
+                    <v-col cols="8">
+                        <h4 class="text-h6 d-block mb-4" id="intro-tools">
+                            Simple chat app
+                        </h4>
+                        <p>Simple chat app made with Elixir Phoenix and VueJs. You could try it here <a href="https://chat.pearl2201.com/">https://chat.pearl2201.com/</a></p>
+                      </v-col>
+                </v-row>
             </div>
         </div>
     </div>
